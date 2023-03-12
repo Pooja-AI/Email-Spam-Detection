@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Blue Menu Page</title>
+	<style type="text/css">
+		body {
+			
+			background-color: #063055; /* set the background color to blue */
+			font-family: Arial, sans-serif;
+			color: #FFFFFF; /* set the text color to white */
+			position: relative; /* set the position of the text */
+            
+		
+		}
+		ul {
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+			background-color: #0074D9;
+			overflow: hidden;
+            float: right;
+		}
+		li {
+			float: right;
+		}
+		li a {
+			display: block;
+			color: white;
+			text-align: center;
+			padding: 14px 16px;
+			text-decoration: none;
+			font-size: 18px;
+			font-weight: bold;
+			transition: background-color 0.5s ease;
+
+            float: right;
+		}
+		li a:hover {
+			background-color: #005FB2;
+		}
+		.form-container {
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column; /* change from row to column */
+            align-items: center;
+            justify-content: center;
+            }
+		.form-input {
+            padding: 10px;
+            font-size: 16px;
+            border: 2px solid #0074D9;
+            border-radius: 5px;
+            margin-right: 10px;
+            left: -100px;
+            margin-bottom: 10px; /* add margin-bottom to create space between textarea and button */
+            }
+		
+		.submit-button {
+            padding: 10px 20px;
+            font-size: 13px;
+            background-color: #0074D9;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.5s ease;
+            }
+		
+		.submit-button:hover {
+			background-color: #005FB2;
+		}
+        .leftside{
+            float: right;
+        }
+	</style>
+</head>
+<body style="background-image: url('/static/images/email.gif');">
+	<ul>
+		<li><a href="https://www.linkedin.com/in/pooja-sunkara-873b24ba/">Contact</a></li>
+		<li><a href="https://www.linkedin.com/in/pooja-sunkara-873b24ba/">About</a></li>
+		<li><a href="#">Documentation</a></li>
+		<li><a href="index.html">Home</a></li>
+	</ul><br><br><br><br><br>
+    <h1>Email Spam Detector</h1>
+    	<!-- <input type="text" class="form-input" placeholder="Enter your name"> -->
+        <div class="leftside">
+            <form action="http://localhost:5000//predict" method="POST">
+           <textarea id="message" class="form-input" name="text" rows="10" cols="43" placeholder="Enter your Email here"></textarea><br>
+		   <center><button class="submit-button">Check Email SPAM or HAM</button> </center></form></div>
+    </div>
+</body>
+
+</html>

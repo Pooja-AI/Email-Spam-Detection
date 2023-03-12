@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Blue Menu Page</title>
+	<style type="text/css">
+		body {
+			
+			background-color: #063055; /* set the background color to blue */
+			font-family: Arial, sans-serif;
+			color: #FFFFFF; /* set the text color to white */
+			position: relative; /* set the position of the text */
+            
+		
+		}
+    .highlight {
+  background-color: rgb(178, 40, 30);
+}
+		ul {
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+			background-color: #0074D9;
+			overflow: hidden;
+            float: right;
+		}
+		li {
+			float: right;
+		}
+		li a {
+			display: block;
+			color: white;
+			text-align: center;
+			padding: 14px 16px;
+			text-decoration: none;
+			font-size: 18px;
+			font-weight: bold;
+			transition: background-color 0.5s ease;
+
+            float: right;
+		}
+		li a:hover {
+			background-color: #005FB2;
+		}
+		.form-container {
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column; /* change from row to column */
+            align-items: center;
+            justify-content: center;
+            }
+		.form-input {
+            padding: 10px;
+            font-size: 16px;
+            border: 2px solid #0074D9;
+            border-radius: 5px;
+            margin-right: 10px;
+            left: -100px;
+            margin-bottom: 10px; /* add margin-bottom to create space between textarea and button */
+            }
+		
+		.submit-button {
+            padding: 10px 20px;
+            font-size: 13px;
+            background-color: #0074D9;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.5s ease;
+            }
+		
+		.submit-button:hover {
+			background-color: #005FB2;
+		}
+        .leftside{
+            float: right;
+        }
+	</style>
+</head>
+<body style="background-image: url('/static/images/email.gif');">
+	<ul>
+		<li><a href="https://www.linkedin.com/in/pooja-sunkara-873b24ba/">Contact</a></li>
+		<li><a href="https://www.linkedin.com/in/pooja-sunkara-873b24ba/">About</a></li>
+		<li><a href="#">Documentation</a></li>
+		<li><a href="http://localhost:5000//predict">Home</a></li>
+	</ul><br><br><br><br><br>
+  <div class="leftside">
+    <div class="text">
+      <h1 style="color:rgb(15, 80, 149)">{{Emai_Category}} EMAIL</h1>
+      <textarea cols="50" rows="5" style="overflow:scroll;">
+     {{ originaltext }}</textarea>
+    </div>
+    <div id="wordsToHighlight">{{highlighted_text}}</div>
+    <script>
+      const originalText = "I got lucky trip";
+const wordsToHighlight = ['lucky', 'trip'];
+
+wordsToHighlight.forEach(word => {
+  const regex = new RegExp(`\\b${word}\\b`, 'gi');
+  const newText = originalText.replace(regex, `<span class="highlight">${word}</span>`);
+  console.log(newText);
+});
+
+    </script>
+</html>

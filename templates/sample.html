@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Left Side Menu</title>
+	<style>
+		ul {
+			list-style-type: none; /* remove bullet points */
+			margin: 0;
+			padding: 0;
+			width: 200px; /* adjust as needed */
+			background-color: #f1f1f1;
+			position: fixed; /* fix the position of the menu */
+			height: 100%; /* set the menu height to full screen */
+			overflow: auto; /* enable scrolling if content exceeds menu height */
+		}
+
+		li a {
+			display: block;
+			color: #000;
+			padding: 8px 16px;
+			text-decoration: none;
+		}
+
+		li a:hover {
+			background-color: #555;
+			color: #fff;
+		}
+
+		.active {
+			background-color: #4CAF50;
+			color: #fff;
+		}
+	</style>
+</head>
+<body>
+
+	<ul>
+       
+		<li><a class="active" href="#home">Home</a></li>
+		<li><a href="#about">About</a></li>
+		<li><a href="#contact">Contact</a></li>
+		<li><a href="#services">Services</a></li>
+		<li><a href="#blog">Blog</a></li>
+		<li><a href="#gallery">Gallery</a></li>
+		<li><a href="#faq">FAQ</a></li>
+	</ul>
+
+</body>
+</html>
