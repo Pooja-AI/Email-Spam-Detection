@@ -87,18 +87,20 @@
   <div class="leftside">
     <div class="text">
       <h1 style="color:rgb(15, 80, 149)">{{Emai_Category}} EMAIL</h1>
-      <textarea cols="50" rows="5" style="overflow:scroll;">
-     {{ originaltext }}</textarea>
+      <div id="original">
+     {{original_text}}</div>
     </div>
     <div id="wordsToHighlight">{{highlighted_text}}</div>
     <script>
-      const originalText = "I got lucky trip";
-const wordsToHighlight = ['lucky', 'trip'];
+      
+  var originalText = '{{original_text}}'
+  var wordsToHighlight = ['{{highlighted_text}}']
 
-wordsToHighlight.forEach(word => {
+  wordsToHighlight.forEach(word => {
   const regex = new RegExp(`\\b${word}\\b`, 'gi');
   const newText = originalText.replace(regex, `<span class="highlight">${word}</span>`);
   console.log(newText);
+  document.getElementById('original').innerHTML=newText
 });
 
     </script>
